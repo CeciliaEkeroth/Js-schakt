@@ -1,0 +1,38 @@
+.detailsContainer {
+    background-color: #EEEEEE;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 80px 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 50px;
+}
+
+.detailsImg {
+    grid-column: 1;
+  grid-row: 1 / 3;
+  padding: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  justify-self: right;
+  width: 100%;
+}
+
+.detailsH {
+    padding-left: 20px;
+    font-size: 2rem;
+    padding-top: 30px;
+}
+
+.detailsP {
+    padding-left: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.jsLogoDetails {
+    position: absolute;
+    width: 110px;
+    top: 205px;
+    left: 9.5%;
+}
