@@ -2,19 +2,48 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
+import MobileHeader from "../components/MobileHeader";
 import Logo from "../images/JS-logo1.png";
+import Maskiner from "../images/maskiner.jpg";
+import Ovrig from "../images/övrig.jpg";
+import Hjulspar from "../images/hjulspår.jpg";
+import { Carousel } from "react-responsive-carousel";
+import { Helmet } from "react-helmet-async";
 
 const Other = () => {
   return (
     <>
-      <Header />
-      <img src={Logo} alt="" className="jsLogoDetails" />
-      <div className="detailsContainer">
-        <img
-          src="https://via.placeholder.com/550x400"
-          alt=""
-          className="detailsImg"
+      <Helmet>
+        <title>JS Schakt - Enskilt Avlopp & Övriga arbeten</title>
+        <meta
+          name="description"
+          content="JS Schakt - Installation av enskilda avloppsanläggningar. Diplomerad och godkänd av kommunen. Olika alternativ på enskilda avlopp är t.ex. från en vanlig 3-kammarbrunn (slamavskiljare) med efterföljande infiltration till ett komplett minireningsverk."
         />
+      </Helmet>
+      <Header />
+      <MobileHeader />
+      <div className="detailsContainer">
+        <Carousel
+          className="detailsImg"
+          showThumbs={false}
+          showIndicators={false}
+          infiniteLoop
+          autoPlay
+        >
+          <div>
+            <img
+              src={Maskiner}
+              alt="En samling av maskiner som står på ett gårdsplan"
+            />
+          </div>
+          <div>
+            <img src={Hjulspar} alt="Hjulspår från en maskin" />
+          </div>
+          <div>
+            <img src={Ovrig} alt="Man som klättrar upp på sidan av en maskin" />
+          </div>
+        </Carousel>
+        <img src={Logo} alt="JS Schakt logotyp" className="jsLogoDetails" />
         <h1 className="detailsH">Enskilt Avlopp</h1>
         <p className="detailsP">
           Är "diplomerad" ("generellt" godkänd av kommunen) för instalation av

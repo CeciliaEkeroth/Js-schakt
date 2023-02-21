@@ -3,16 +3,20 @@ import { useState } from "react";
 import ContactCard from "./ContactCard";
 
 const Contact = () => {
-
   const [showModal, setShowModal] = useState(false);
 
   return (
     <>
-      <div className="contactDiv">
+      <div className="contactDiv" data-aos="zoom-in">
         <p className="contactText">Har du några frågor eller funderingar?</p>
-        <button className="contactBtn" onClick={() => {
+        <button
+          className="contactBtn"
+          onClick={() => {
             setShowModal(true);
-          }}>Kontakt</button>
+          }}
+        >
+          Kontakt
+        </button>
       </div>
       <div
         id="myModal"
@@ -22,7 +26,7 @@ const Contact = () => {
         }}
         style={{ display: showModal ? "initial" : "none" }}
       >
-        <ContactCard/>
+        <ContactCard />
       </div>
     </>
   );
